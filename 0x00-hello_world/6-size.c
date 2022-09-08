@@ -21,4 +21,4 @@ printf("Size of a char: %lu byte(s)\n", sizeof(acharacter));
        printf("Size of a float: %lu byte(s)\n", sizeof(afloat));
 
        return (0);
-}       
+}      
