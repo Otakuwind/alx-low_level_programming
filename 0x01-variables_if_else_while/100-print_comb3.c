@@ -13,18 +13,24 @@ int main(void)
 
 	for (var = 0; var < 9; var++)
 	{
-	int ii;
+		int ii;
 
-	for (ii = var + 1; ii < 10; ii++)
-	{
-		putchar((var % 10) + '0');
-		putchar((ii % 10) + '0');
-
-		if (var != 8)
+		for (ii = var + 1; ii < 10; ii++)
 		{
-		putchar(',');
-		putchar(' ');
+			putchar((var % 10) + '0');
+			putchar((ii % 10) + '0');
+
+			if (var != 8)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+			else
+				continue
 		}
-		else
-			continue
+
 	}
+	putchar('\n');
+
+	return (0);
+}
