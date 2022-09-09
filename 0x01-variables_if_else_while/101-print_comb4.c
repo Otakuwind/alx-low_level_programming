@@ -13,7 +13,7 @@ int main(void)
 	for (var = 0; var < 8; var++)
 	{
 		int ii;
-		
+
 		for (ii = var + 1; ii < 9; ii++)
 		{
 			int jj;
