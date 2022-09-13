@@ -2,30 +2,25 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- *main - Entry point
+ *main - first 100 fibonnaci number
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-unsigned long long n, first = 0, second = 1, next, c;
+long int n1 = 1, result, n2 = 2, nLast = 100;
+int ii;
 
-printf("Enter the number of terms\n");
-scanf("%d",&n);
-
-printf("First %d terms of Fibonacci series are :-\n",n);
-
-for ( c = 0 ; c < n ; c++ )
+printf("%lu, %lu, ", n1, n2);
+for (ii = 2; ii < nLast; ii++)
 {
-	if ( c <= 1 )
-		next = c;
-	else
-	{
-		next = first + second;
-		first = second;
-		second = next;
-	}
-	printf("%d\n",next);
+	result = n1 + n2;
+	n1 = n2;
+	n2 = result;
+	printf("%lu", result);
+	if (ii != nLast - 1)
+		printf(", ");
 }
-	return (0);
+printf("\n");
+return (0);
 }
