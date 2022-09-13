@@ -45,7 +45,7 @@ void print_times_table(int n)
 			{
 				print(mul);
 			}
-			if (jj < n)
+if (jj < n)
 			{
 		_putchar(',');
 		_putchar(' ');
