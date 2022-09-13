@@ -2,13 +2,13 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- *main - first 100 fibonnaci number
+ *main - first 98 fibonnaci number
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-long int n1 = 1, result, n2 = 2, nLast = 100;
+long int n1 = 1, result, n2 = 2, nLast = 98;
 int ii;
 
 printf("%lu, %lu, ", n1, n2);
@@ -22,18 +22,5 @@ for (ii = 2; ii < nLast; ii++)
 		printf(", ");
 }
 printf("\n");
-
-int i = 1, j = 2, total = 0;
-int k;
-
-while (j < 135301852344706746049)
-{
-	if (j % 2 == 0)
-		total += j;
-	k = j;
-	j += i;
-	i = k;
-}
-printf("%d\n", total);
 return (0);
 }
