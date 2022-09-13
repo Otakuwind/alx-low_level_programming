@@ -22,8 +22,7 @@ for (a = 0; a <= 9; a++)
 			_putchar(c + 48);
 		}
 		else
-	
-		{
+			{
 			_putchar((c / 10) + 48);
 			_putchar((c % 10) + 48);
 		}
