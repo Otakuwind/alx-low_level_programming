@@ -1,35 +1,18 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
 
-int _putchar(char c);
+void print_uint(unsigned int n);
 
 /**
-*
-*
-* @n: params an integer
-* No return
-*/
-
-void print_number(int n)
+ * print_number - print number
+ * @var: variable to be printed
+ *
+ *
+ */
+void print_number(int var)
 {
-	unsigned int n1 = 0;
-
-	if  (n < 0)
+	void print(unsigned int n)
 	{
-		n1 = -n;
-		_putchar('-');
+		if (n / 10)
+			print(n / 10);
+		_putchar('0' + n % 10);
 	}
-
-	else
-	{
-		n1 = n;
-	}
-
-	if (n1 / 10)
-	{
-		print_number(n1 / 10);
-	}
-
-	_putchar((n1 % 10) + '0');
-}
