@@ -2,7 +2,7 @@
 
 /**
 * print_diagonal - prints diagonal line
-* @n: length of line 
+* @n: length of line
 * Return: nothing
 **/
 
