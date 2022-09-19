@@ -6,19 +6,25 @@
  * Description: prints second half of string
  * Return:0
  */
+
 void puts_half(char *str)
 {
-	int a, n, len = 0;
+	int i, j;
 
-	for (a = 0; str[a] != '\0'; a++)
-		len++;
+	i = 0;
 
-	n = (len / 2);
+	while (str[i] != '\0')
+		i++;
 
-	if ((len % 2) == 1)
-		n = ((len - 1) / 2);
+	j = i / 2;
 
-	for (a = n; str[a] != '\0'; a++)
-		_putchar(str[a]);
+	if (i % 2 == 1)
+		j++;
+
+	while (j < i)
+	{
+		_putchar(str[j]);
+		j++;
+	}
 	_putchar('\n');
 }
