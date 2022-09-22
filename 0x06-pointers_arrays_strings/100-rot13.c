@@ -8,20 +8,25 @@
  */
 char *rot13(char *n)
 {
-int i, j;
-char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-char b[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+int x, rot_c = 13, i = 0;
+char toswap[] = {'A', 'N', 'a', 'n', 'B', 'O', 'b', 'o', 'C', 'P',
+'c', 'p', 'D', 'Q', 'd', 'q', 'E', 'R', 'e', 'r', 'F', 'S', 'f',
+'s', 'G', 'T', 'g', 't', 'H', 'U', 'h', 'u', 'I', 'V', 'i', 'v',
+'J', 'W', 'j', 'w', 'K', 'X', 'k', 'x', 'L', 'Y', 'l', 'y', 'M',
+'Z', 'm', 'z'};
 
-for (i = 0; *(s + i); i++)
+while (n[i] != '\0')
 {
-	for (j = 0; j < 52; j++)
-	{
-		if (a[j] == *(s + i))
-		{
-			*(s + i) = b[j];
-			break;
-		}
-	}
+for (x = 0; x <= 51; x++)
+{
+if (n[i] == toswap[x])
+{
+n[i] = n[i] + rot_c;
+x = 51;
 }
-return (s);
+rot_c = rot_c * -1;
+}
+i++;
+}
+return (n);
 }
