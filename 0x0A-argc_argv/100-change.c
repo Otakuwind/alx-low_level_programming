@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 		printf("%d\n", 0);
 		return (0);
 }
-		if (value % 25 >= 0)
+if (value % 25 >= 0)
 {
 	c += value / 25;
 	value = value % 25;
