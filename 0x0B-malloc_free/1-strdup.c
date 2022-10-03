@@ -30,3 +30,5 @@ x++;
 	strNew[y] = str[y];
 	y++;
 }
+return (strNew);
+}
