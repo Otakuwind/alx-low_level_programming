@@ -7,21 +7,13 @@
  */
 size_t print_listint(const listint_t *h)
 {
-		int i = 0;
-		listint_t *holder;
+		unsigned int i = 0;
+		const listint_t *new_node = h;
 
-if (h)
-{
-printf("%d\n", h->n);
-holder = h->next;
-++i;
-}
-
-while (holder)
-{
-printf("%d\n", holder->n);
-holder = holder->next;
-++i;
-}
+		       	for (; new_node; new_node = new_node->next)
+				{
+printf("%d\n", new_node->n);
+	i++;
+				}
 return (i);
 }
