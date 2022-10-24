@@ -10,18 +10,18 @@ size_t print_listint(const listint_t *h)
 		int i = 0;
 		listint_t *holder;
 
-		if (h)
-		{
-		printf("%d\n", h->n);
-		holder = h->next;
-		++i;
-		}
+if (h)
+{
+printf("%d\n", h->n);
+holder = h->next;
+++i;
+}
 
-		while (holder)
-		{
-		printf("%d\n", holder->n);
-		holder = holder->next;
-		++i;
-		}
-		return (i);
+while (holder)
+{
+printf("%d\n", holder->n);
+holder = holder->next;
+++i;
+}
+return (i);
 }
